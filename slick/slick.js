@@ -193,8 +193,10 @@
 
         _.$slideTrack.find('.slick-active').attr({
             'aria-hidden': 'false'
-        }).find('a, input, button, select').attr({
+        }).find('a, input, button, select, iframe').attr({
             'tabindex': '0'
+        }).find('iframe').attr({
+            'aria-hidden': 'false'
         });
 
     };
@@ -1333,8 +1335,10 @@
         _.$slides.add(_.$slideTrack.find('.slick-cloned')).attr({
             'aria-hidden': 'true',
             'tabindex': '-1'
-        }).find('a, input, button, select').attr({
+        }).find('a, input, button, select, iframe').attr({
             'tabindex': '-1'
+        }).find('iframe').attr({
+            'aria-hidden': 'true'
         });
 
         if (_.$dots !== null) {
